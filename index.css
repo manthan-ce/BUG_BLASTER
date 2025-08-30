@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 98%;
+    --foreground: 185 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 185 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 185 20% 15%;
+
+    --primary: 195 100% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 95 30% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 30% 95%;
+    --muted-foreground: 185 15% 45%;
+
+    --accent: 35 80% 65%;
+    --accent-foreground: 185 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 20% 88%;
+    --input: 200 20% 94%;
+    --ring: 195 100% 27%;
+
+    /* Custom environmental colors */
+    --ocean-deep: 195 100% 20%;
+    --ocean-light: 195 100% 85%;
+    --mangrove-dark: 95 30% 25%;
+    --mangrove-light: 95 40% 88%;
+    --earth-warm: 25 60% 55%;
+    --sunset: 15 90% 70%;
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--primary)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--mangrove-dark)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--mangrove-dark)));
+
+    /* Shadows */
+    --shadow-ocean: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-nature: 0 8px 25px -8px hsl(var(--secondary) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 185 30% 8%;
+    --foreground: 200 30% 95%;
+
+    --card: 185 25% 12%;
+    --card-foreground: 200 30% 95%;
+
+    --popover: 185 25% 12%;
+    --popover-foreground: 200 30% 95%;
+
+    --primary: 195 100% 45%;
+    --primary-foreground: 185 30% 8%;
+
+    --secondary: 95 25% 20%;
+    --secondary-foreground: 200 30% 95%;
+
+    --muted: 185 20% 18%;
+    --muted-foreground: 200 15% 65%;
+
+    --accent: 35 70% 55%;
+    --accent-foreground: 185 30% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 200 30% 95%;
+
+    --border: 185 20% 18%;
+    --input: 185 20% 18%;
+    --ring: 195 100% 45%;
+
+    /* Dark mode environmental colors */
+    --ocean-deep: 195 100% 15%;
+    --ocean-light: 195 60% 25%;
+    --mangrove-dark: 95 30% 15%;
+    --mangrove-light: 95 25% 22%;
+    --earth-warm: 25 50% 45%;
+    --sunset: 15 80% 60%;
+
+    /* Dark gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--primary)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--mangrove-dark)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--mangrove-dark)));
+
+    /* Dark shadows */
+    --shadow-ocean: 0 10px 30px -10px hsl(var(--primary) / 0.4);
+    --shadow-nature: 0 8px 25px -8px hsl(var(--secondary) / 0.5);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
